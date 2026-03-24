@@ -1,5 +1,9 @@
-let input = prompt ("$100");
-let priceWithoutDollar= input.replace("$", "").trim();
-let priceNumber = parseFloat (priceWithoutDollar);
-let discountPrice= priceNumber * 0.9;
-console.log(`Your new price is: $${discountPrice.toFixed(2)}`);
+
+
+function isValidPassword(password, username) { 
+    if (password.length <8) return false;
+    if (password.includes (" ")) return false;
+    if (password.includes (username)) return false;
+    return true;
+} 
+    
