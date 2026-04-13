@@ -35,28 +35,29 @@ function addMovie(){
 //addMovie();
 
 
-// function listMovies(){
-//     movies.forEach(function(movie){
-//        console.log(movie.title + "("+movie.year+")");
+ function listMovies(){
+    movies.forEach(function(movie){
+       console.log(movie.title + "("+movie.year+")");
 
-//         });
-//     }
-// listMovies();
+         });
+     }
+ listMovies();
 
-// function markAsWatched(title){
-//     let movie = movies.find(function(movie){
-//        return movie.title ===title;
-//     });
-//    if(movie){
-//         movie.isWatched = true;
-//        console.log("Movie watched");
-//        }else{
-//             console.log("Movie not found");
-//         }
-//    }
-//     markAsWatched("Frozen");
-//     console.log(movies)
-// //addMovie();
+ function markAsWatched(title){
+     let movie = movies.find(function(movie){
+        return movie.title ===title;
+    });
+   if(movie){
+        movie.isWatched = true;
+        console.log("Movie watched");
+        }else{
+             console.log("Movie not found");
+         }
+    }
+     markAsWatched("Frozen");
+     console.log(movies)
+//addMovie();
+
 function removeMovie(title){
     movies = movies.filter(function (movie) {
         return movie.title !==title;
@@ -73,6 +74,47 @@ function listUnwatched(){
     });
 }
 listUnwatched();
+
+let running = true;
+while(running) {
+    const choice = prompt(
+    "Movie tracker\n" +
+    "1. Add movie\n"  +
+    "2. List movies\n" +
+    "3. Mark as wachted\n" +
+    "4. Remove movie\n" +
+    "5.Exit"
+    )};
+switch(choice) {
+    case "1":
+        addMovie ();
+        break;
+
+    case "2":
+        listMovies ();
+        break;
+    
+    case "3":
+       let watchedTitle = prompt ("Enter as watched");
+       markAsWatched(watchedTitle);
+        break;
+
+    case "4":
+        let removeTitle = prompt ("Enter to remove");
+        removeMovie(removeTitle);
+        break;
+
+    case "5":
+        running = false;
+        alert ("Chio")
+        break;
+    
+    default:
+        alert("invalid choice")
+        
+    
+}
+
 
 
 
