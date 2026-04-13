@@ -26,11 +26,19 @@ function addMovie(){
     let newMovie = {
         title:title,
         year:year,
-        isWatched:true
+        isWatched:false
     };
     movies.push(newMovie);
     console.log(movies);
     alert("Movie added");
 }
-addMovie();
-addMovie();
+//addMovie();
+//addMovie();
+
+function listMovies(){
+    movies.forEach(function(movie){
+        console.log(movie.title + "("+movie.year+")");
+
+        });
+    }
+listMovies();
