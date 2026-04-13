@@ -33,27 +33,60 @@ function addMovie(){
     alert("Movie added");
 }
 //addMovie();
-//addMovie();
 
-function listMovies(){
-    movies.forEach(function(movie){
-       console.log(movie.title + "("+movie.year+")");
 
-        });
-    }
-listMovies();
+// function listMovies(){
+//     movies.forEach(function(movie){
+//        console.log(movie.title + "("+movie.year+")");
 
-function markAsWatched(title){
-    let movie = movies.find(function(movie){
-       return movie.title ===title;
+//         });
+//     }
+// listMovies();
+
+// function markAsWatched(title){
+//     let movie = movies.find(function(movie){
+//        return movie.title ===title;
+//     });
+//    if(movie){
+//         movie.isWatched = true;
+//        console.log("Movie watched");
+//        }else{
+//             console.log("Movie not found");
+//         }
+//    }
+//     markAsWatched("Frozen");
+//     console.log(movies)
+// //addMovie();
+function removeMovie(title){
+    movies = movies.filter(function (movie) {
+        return movie.title !==title;
+        
+    })
+    console.log ("Movie,removed");
+    console.log(movies);
+}
+removeMovie("Aladdin");
+
+function listUnwatched(){
+    let listUnwatched = movies.filter(function(movie){
+        return movie.isWatched ===false;
     });
-   if(movie){
-        movie.isWatched = true;
-       console.log("Movie watched");
-       }else{
-            console.log("Movie not found");
-        }
-   }
-    markAsWatched("Frozen");
-    console.log(movies)
-//addMovie();
+}
+listUnwatched();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
