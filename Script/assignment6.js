@@ -108,7 +108,7 @@ switch(choice) {
 
     case "5":
         running = false;
-        alert ("Chio")
+        alert ("Bye")
         break;
     
     default:
