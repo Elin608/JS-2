@@ -41,7 +41,7 @@ function addMovie(){
 
          });
      }
- listMovies();
+ //listMovies();
 
  function markAsWatched(title){
      let movie = movies.find(function(movie){
@@ -54,8 +54,8 @@ function addMovie(){
              console.log("Movie not found");
          }
     }
-     markAsWatched("Frozen");
-     console.log(movies)
+     //markAsWatched("Frozen");
+     //console.log(movies)
 //addMovie();
 
 function removeMovie(title){
@@ -64,16 +64,18 @@ function removeMovie(title){
         
     })
     console.log ("Movie,removed");
-    console.log(movies);
+   // console.log(movies);
 }
-removeMovie("Aladdin");
+//removeMovie("Aladdin");
 
 function listUnwatched(){
     let listUnwatched = movies.filter(function(movie){
         return movie.isWatched ===false;
+        
     });
-}
-listUnwatched();
+    }
+
+//listUnwatched();
 
 let running = true;
 while(running) {
@@ -84,7 +86,7 @@ while(running) {
     "3. Mark as wachted\n" +
     "4. Remove movie\n" +
     "5.Exit"
-    )};
+    );
 switch(choice) {
     case "1":
         addMovie ();
@@ -113,6 +115,7 @@ switch(choice) {
         alert("invalid choice")
         
     
+}
 }
 
 
